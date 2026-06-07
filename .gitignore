@@ -1,0 +1,44 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js Build and Cache Outputs
+/.next/
+/out/
+/.swc/
+
+# Production Build
+/build
+
+# Testing and Coverage
+/coverage
+
+# Local Environment Secrets (NEVER commit these)
+.env*.local
+.env
+.env.development
+.env.production
+
+# Debug and System Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vercel Deployment Metadata
+.vercel
+
+# TypeScript Compilation Cache
+*.tsbuildinfo

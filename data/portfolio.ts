@@ -76,30 +76,30 @@ export interface PortfolioData {
 
 const portfolioData: PortfolioData = {
   meta: {
-    name: "Jeevraj",
-    tagline: "Open-source developer building document intelligence tools",
+    name: "Jeevraj Taralkar",
+    tagline: "AI Product Engineer · Full-Stack · LLMs · Agents · RAG",
     description:
-      "I build open-source Python libraries and developer tools — focused on document processing, ML-adjacent engineering, and making documents machine-readable before any LLM touches them.",
-    email: "hello@jeevraj.dev",
-    location: "India",
-    availability: "Open to opportunities",
-    resumeUrl: "/assets/resume.pdf",
+      "I build and ship production AI systems — agentic workflows, LLM pipelines, and full-stack SaaS used by Fortune 500 teams, government platforms, and 500K+ users. 6 years of end-to-end ownership across React, Python, and AI infrastructure.",
+    email: "jeevraj.vjti@gmail.com",
+    location: "Mumbai, India",
+    availability: "Open to remote opportunities",
+    resumeUrl: "/assets/Jeevraj-Taralkar-AInative.pdf",
     avatarUrl: undefined,
   },
 
   about: {
-    headline: "I build infrastructure for documents.",
+    headline: "I ship AI products that work in the real world — not just in demos",
     bio: [
-      "I'm a solo developer with an entrepreneurial streak — obsessed with open-source tooling, document processing pipelines, and the engineering that sits between raw PDFs and useful data.",
-      "My current focus is a Python library for PDF table extraction: borderless tables, context capture, zero system dependencies. No LLMs, no model training from scratch — just deterministic, offline extraction powered by pre-trained ONNX models.",
-      "I also build on the frontend side. React, TypeScript, component libraries. I published a React animation library called trishasync and have shipped full-stack features across multiple products.",
-      "The goal is to build document infrastructure that makes the unstructured web machine-readable — and eventually, a company around it.",
+      "I'm a Fullstack AI Engineer with 6+ years of experience building production systems that combine LLMs, agentic workflows, and full-stack engineering. My work has reached Fortune 500 managers, 500K+ consumer app users, and government classrooms across three Indian states.",
+      "At Findability Sciences, I own the frontend and backend of a flagship Agentic AI platform — an LLM-powered analytics system running on SAP HANA that handles 3,000+ daily interactions, reduced query resolution time by 54%, and cut billion-row query latency from ~60s to under 3s.",
+      "I've also built a full AI-assisted patent drafting product end-to-end: agentic flows, tool calling, OAuth access, and markdown-safe LLM outputs for IP law firms. And a GenAI-powered LMS deployed across three Indian states, integrating real-time doubt solving, MCQ generation, and hardware interactions with IFP boards.",
+      "I think in systems, not just features. I care about latency, reliability, and the UX of AI-powered products — not just whether the model responds.",
     ],
     highlights: [
-      { label: "Focus", value: "Document Processing & ML-Adjacent Engineering" },
-      { label: "Stack", value: "Python · React · TypeScript · Next.js" },
-      { label: "Current", value: "PDF Table Extraction Library (OSS)" },
-      { label: "Ambition", value: "YC-bound document intelligence startup" },
+      { label: "Current", value: "AI Product Engineer @ Findability Sciences" },
+      { label: "Stack", value: "Python · FastAPI · React · Next.js · TypeScript" },
+      { label: "AI", value: "LLMs · RAG · Agents · Tool Calling · OpenAI · Azure" },
+      { label: "Scale", value: "Fortune 500 clients · 500K+ users · 3,000+ daily AI interactions" },
     ],
   },
 
@@ -116,58 +116,75 @@ const portfolioData: PortfolioData = {
 
   projects: [
     {
-      id: "pdf-table-extractor",
-      title: "pdf-table-extractor",
+      id: "agentic-analytics-sap",
+      title: "Agentic AI Analytics on SAP HANA",
       description:
-        "A Python library for extracting tables from PDFs — including borderless and complex tables — with surrounding context capture. Zero system dependencies, offline, deterministic. Built on pdfplumber, PyMuPDF, and pre-trained ONNX models.",
+        "Production LLM pipeline that lets 800+ global managers query billion-row SAP HANA datasets in plain English. Enforces RBAC-aware SQL guardrails (partition pruning, cost checks) on LLM-generated queries. Reduced query latency from ~60s to under 3s and cut overall query load by ~70%.",
       longDescription:
-        "Designed for production use in document intelligence pipelines. Handles bordered, borderless, and nested tables. Captures surrounding paragraph context for each table. Ships with a pre-trained Table Transformer (TATR) ONNX model. No LLM required, no model training from scratch, no Tesseract or Poppler installs.",
-      type: "personal",
-      tags: ["Python", "PDF", "ML", "ONNX", "pdfplumber", "PyMuPDF", "OSS"],
-      githubUrl: "https://github.com/JTtime/pdf-table-extractor",
+        "Built on FastAPI and OpenAI with a custom SQL guardrail layer that enforces row-level security, partition pruning, and query cost limits before any LLM-generated SQL touches the database. Handles 3,000+ daily interactions. The agentic layer routes between clarification, decomposition, and direct execution depending on query complexity.",
+      type: "company",
+      companyName: "Findability Sciences",
+      companyUrl: "https://www.findability.ai/en/manufacturing-ai",
+      tags: ["Python", "FastAPI", "OpenAI", "SAP HANA", "Agents", "LLM", "SQL Guardrails"],
+      featured: true,
+      year: 2025,
+    },
+    {
+      id: "patent-drafting-ai",
+      title: "AI Patent Drafting Copilot",
+      description:
+        "End-to-end AI-assisted patent drafting platform for IP law firms. Built agentic flows with tool calling, OAuth-based secure access, and markdown-safe LLM outputs. Dual attorney/inventor portals with version management, claims refinement, and examiner analysis views — enabling 60%+ time savings in patent drafting.",
+      longDescription:
+        "Full ownership of frontend (Next.js, React, TypeScript, Zustand) and backend AI pipeline (FastAPI, OpenAI). Features include CKEditor-integrated AI content insertion, collapsible draft blocks, QA notes workflows, claim version dropdowns with RBAC, and real-time state management across the attorney and inventor portals.",
+      type: "company",
+      companyName: "Findability Sciences",
+      companyUrl: "https://www.findability.ai/en",
+      tags: ["Next.js", "React", "TypeScript", "FastAPI", "OpenAI", "Tool Calling", "Agents", "Zustand"],
+      featured: true,
+      year: 2025,
+    },
+    {
+      id: "genai-lms",
+      title: "GenAI-Powered Government LMS",
+      description:
+        "A full-stack Learning Management System deployed across 3 Indian states, supporting 10K+ monthly sessions. Integrated LLM-based doubt solving and MCQ generation directly into digital classrooms with support for IFP boards, pen input, and clicker hardware. Cut teacher effort by 40% and deployment time by 60% via a microfrontend + microservices architecture.",
+      type: "company",
+      companyName: "Vridhee Innovations",
+      companyUrl: "https://about.vridhee.com/",
+      tags: ["React", "Node.js", "FastAPI", "LLM", "GenAI", "Microfrontends", "Python"],
       featured: true,
       year: 2024,
+    },
+    {
+      id: "edufund-onboarding",
+      title: "EduFund Mobile Onboarding & GenAI Chatbot",
+      description:
+        "Designed and shipped the end-to-end onboarding flow for a consumer fintech app with 500K+ users, as the sole frontend engineer. Also built a GenAI chatbot for college fee prediction using Python and OpenAI APIs — working across Web (Next.js), Mobile (React Native), and Backend (FastAPI, Node.js).",
+      type: "company",
+      companyName: "EduFund",
+      tags: ["React Native", "Next.js", "FastAPI", "Python", "OpenAI", "Node.js"],
+      year: 2023,
     },
     {
       id: "trishasync",
       title: "trishasync",
       description:
-        "A React component library focused on animated promise-state transitions. Ships MorphSpinner, MorphButton, and GlassCard components with smooth loading/success/error state animations.",
+        "A published React component library for animated promise-state transitions. Ships MorphSpinner, MorphButton, and GlassCard components with smooth loading/success/error state animations. Available on npm.",
       type: "personal",
       tags: ["React", "TypeScript", "npm", "Animation", "Component Library"],
       githubUrl: "https://github.com/JTtime/promiseTriState",
       liveUrl: "https://www.npmjs.com/package/trishasync",
-      featured: true,
+      featured: false,
       year: 2024,
     },
     {
       id: "rag-ingestion-pipeline",
-      title: "RAG Ingestion Pipeline",
+      title: "Production RAG Ingestion Pipeline",
       description:
-        "A production RAG ingestion system with multi-format support (PDF, DOCX, PPTX, images), PDF classification, OCR pipelines, table/formula extraction, and a Node.js hybrid architecture. Built on sentence-transformers, FAISS, and pymupdf.",
+        "A production-grade RAG ingestion system with multi-format support (PDF, DOCX, PPTX, images), PDF classification, OCR pipelines, table and formula extraction, and a Node.js hybrid architecture. Built on sentence-transformers, FAISS, and PyMuPDF.",
       type: "personal",
-      tags: ["Python", "RAG", "FAISS", "OCR", "LangChain", "Node.js"],
+      tags: ["Python", "RAG", "FAISS", "OCR", "LangChain", "Node.js", "PyMuPDF"],
       githubUrl: "https://github.com/JTtime/rag-pipeline",
-      year: 2024,
-    },
-    {
-      id: "patent-management-tool",
-      title: "Patent Management Tool",
-      description:
-        "Contributed frontend features to a patent lifecycle management SaaS — including multi-step figure description workflows, consolidated summary slides, and integration of an AI helping-agent view with optimistic UI updates.",
-      type: "company",
-      companyName: "Confidential",
-      tags: ["React", "TypeScript", "Next.js", "SaaS"],
-      year: 2024,
-    },
-    {
-      id: "docling-contribution",
-      title: "Docling OSS Contribution",
-      description:
-        "Open-source contribution to the Docling document parsing library — improved handling of multi-column PDF layouts and edge-case table detection.",
-      type: "opensource",
-      tags: ["Python", "PDF", "Open Source", "Document Parsing"],
-      githubUrl: "https://github.com/DS4SD/docling",
       year: 2024,
     },
   ],
@@ -175,85 +192,39 @@ const portfolioData: PortfolioData = {
   blogs: [
     {
       id: "tool-calling",
-
-      title:
-        "From Chatbots to AI Agents: A Practical Guide to OpenAI Tool Calling",
-
+      title: "From Chatbots to AI Agents: A Practical Guide to OpenAI Tool Calling",
       summary:
         "Practical lessons from building agentic AI systems with tool calling, orchestration, and production workflows.",
-
       date: "2025-08-02",
-
-      tags: [
-        "OpenAI",
-        "AI Agents",
-        "Tool Calling",
-        "LLM"
-      ],
-
+      tags: ["OpenAI", "AI Agents", "Tool Calling", "LLM"],
       readingTime: "10 min",
-      url: "https://www.linkedin.com/pulse/from-chatbots-ai-agents-practical-guide-building-agentic-taralkar-oxiuf/"
-
+      url: "https://www.linkedin.com/pulse/from-chatbots-ai-agents-practical-guide-building-agentic-taralkar-oxiuf/",
     },
     {
       id: "prompt-engineering",
-
-      title:
-        "Vibe Coding is a lie",
-
-      summary:
-        "Prompt Engineering Is Overrated. Engineering Skill Is Not.",
-
+      title: "Vibe Coding is a lie",
+      summary: "Prompt Engineering Is Overrated. Engineering Skill Is Not.",
       date: "2026-02-01",
-
-      tags: [
-        "RAG",
-        "LLM",
-        "AI Engineering",
-        "Prompt Engineering",
-        "Vibe Coding"
-      ],
-
+      tags: ["RAG", "LLM", "AI Engineering", "Prompt Engineering", "Vibe Coding"],
       readingTime: "9 min",
-      url: "https://jeevrajtaralkar.substack.com/p/prompt-engineering-is-overrated-engineering"
+      url: "https://jeevrajtaralkar.substack.com/p/prompt-engineering-is-overrated-engineering",
     },
     {
       id: "production-rag",
-
-      title:
-        "The Reality of Building a Production-Grade RAG System",
-
+      title: "The Reality of Building a Production-Grade RAG System",
       summary:
         "Why real-world RAG systems require OCR, document understanding, multimodal parsing, and better retrieval design.",
-
       date: "2026-02-01",
-
-      tags: [
-        "RAG",
-        "LLM",
-        "AI Engineering"
-      ],
-
-      readingTime: "9 min"
+      tags: ["RAG", "LLM", "AI Engineering"],
+      readingTime: "9 min",
     },
     {
       id: "genai-journey",
-
-      title:
-        "From JavaScript Curiosity to Enterprise GenAI Systems",
-
-      summary:
-        "My transition from traditional frontend engineering into production-grade AI systems.",
-
+      title: "From JavaScript Curiosity to Enterprise GenAI Systems",
+      summary: "My transition from traditional frontend engineering into production-grade AI systems.",
       date: "2025-08-01",
-
-      tags: [
-        "GenAI",
-        "Career Growth",
-        "MERN"
-      ],
-
-      readingTime: "8 min"
+      tags: ["GenAI", "Career Growth", "MERN"],
+      readingTime: "8 min",
     },
     {
       id: "borderless-table-extraction",
@@ -299,43 +270,101 @@ const portfolioData: PortfolioData = {
 
   experience: [
     {
-      id: "current-freelance",
-      company: "Independent / Freelance",
-      role: "Open-Source Developer & Consultant",
-      type: "freelance",
-      startDate: "Jan 2024",
+      id: "findability-sciences",
+      company: "Findability Sciences",
+      role: "Software Engineer — AI Product",
+      type: "full-time",
+      startDate: "Jan 2025",
       endDate: "Present",
       description: [
-        "Building open-source Python libraries for PDF table extraction targeting document intelligence pipelines",
-        "Shipped trishasync — a React animation component library published to npm",
-        "Consulting on frontend architecture (React/TypeScript) and Python ML tooling for early-stage startups",
-        "Researching YC-viable product positioning for a document processing cloud API",
+        "Own end-to-end development of the company's flagship Agentic AI platform — a production LLM system handling 3,000+ daily interactions used by 800+ global managers at Fortune 500 clients",
+        "Built and scaled LLM pipelines (FastAPI + OpenAI/Azure OpenAI) for automated analytics and reporting on SAP HANA, reducing query latency from ~60s to under 3s on billion-row datasets",
+        "Enforced RBAC-aware SQL guardrails on LLM-generated queries — partition pruning, cost checks — reducing query load by ~70%",
+        "Led development of an AI patent drafting copilot with agentic flows, tool calling, and OAuth-based access, enabling 60%+ time savings in patent drafting for IP law firms",
+        "Shipped dual attorney/inventor portals end-to-end: claims refinement views, version management, QA workflows, and CKEditor-integrated AI content insertion",
       ],
       techStack: [
         "Python",
+        "FastAPI",
+        "OpenAI",
+        "Azure OpenAI",
         "React",
-        "TypeScript",
-        "ONNX",
-        "pdfplumber",
-        "PyMuPDF",
         "Next.js",
+        "TypeScript",
+        "Zustand",
+        "SAP HANA",
+        "Agents",
+        "Tool Calling",
       ],
+      companyUrl: "https://www.findability.ai/en",
       remote: true,
     },
     {
-      id: "patent-company",
-      company: "Confidential Startup",
-      role: "Frontend Engineer",
-      type: "contract",
-      startDate: "Jun 2024",
-      endDate: "Nov 2024",
+      id: "vridhee-innovations",
+      company: "Vridhee Innovations",
+      role: "Full-Stack Engineer — AI",
+      type: "full-time",
+      startDate: "May 2024",
+      endDate: "Jan 2025",
       description: [
-        "Built multi-step figure description workflow with consolidated summary slides in a patent management SaaS",
-        "Integrated AI helping-agent view with selection state, optimistic UI updates, and tooltip-based metadata",
-        "Implemented pushQuestion API endpoint integration with real-time state management",
+        "Built and deployed a GenAI-powered LMS (React, Node.js, FastAPI) used across 3 Indian states, supporting 10K+ monthly sessions",
+        "Integrated LLM-based doubt solving and MCQ generation into digital classrooms, reducing teacher effort by 40%",
+        "Designed microfrontend + Python microservices architecture that cut deployment time by 60%",
+        "Added hardware integrations for IFP boards, clicker devices, and pen input for classroom deployments",
+        "Mentored junior engineers and standardized frontend and backend best practices across the team",
       ],
-      techStack: ["React", "TypeScript", "Next.js", "REST APIs"],
-      remote: true,
+      techStack: [
+        "React",
+        "Node.js",
+        "FastAPI",
+        "Python",
+        "LLM",
+        "Microfrontends",
+        "Microservices",
+        "Docker",
+      ],
+      companyUrl: "https://about.vridhee.com/",
+      remote: false,
+      location: "Mumbai, India",
+    },
+    {
+      id: "edufund",
+      company: "EduFund",
+      role: "Product Engineer",
+      type: "full-time",
+      startDate: "May 2023",
+      endDate: "Mar 2024",
+      description: [
+        "Sole frontend engineer who designed and shipped the end-to-end onboarding flow for a mobile app serving 500K+ users",
+        "Built a GenAI chatbot for college fee prediction using Python and OpenAI APIs",
+        "Worked across three surfaces simultaneously: Web (Next.js), Mobile (React Native), and Backend (FastAPI, Node.js)",
+      ],
+      techStack: [
+        "Next.js",
+        "React Native",
+        "FastAPI",
+        "Python",
+        "OpenAI",
+        "Node.js",
+        "TypeScript",
+      ],
+      remote: false,
+      location: "Mumbai, India",
+    },
+    {
+      id: "headgear-audio",
+      company: "HeadGear Audio",
+      role: "Full-Stack Web Developer",
+      type: "full-time",
+      startDate: "Aug 2019",
+      endDate: "Apr 2023",
+      description: [
+        "Built an end-to-end e-commerce platform using Next.js with a Python FastAPI backend",
+        "Implemented analytics dashboards, third-party API integrations, and SEO optimizations",
+      ],
+      techStack: ["Next.js", "Python", "FastAPI", "React", "SEO"],
+      remote: false,
+      location: "Mumbai, India",
     },
   ],
 };

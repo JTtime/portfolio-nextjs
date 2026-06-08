@@ -16,7 +16,7 @@ const typeConfig: Record<
 };
 
 // Chars to show in collapsed description
-const COLLAPSED_CHARS = 120;
+const COLLAPSED_CHARS = 380;
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false);
@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     ? project.longDescription
     : project.description;
 
-  const isLong = project.description.length > COLLAPSED_CHARS || !!project.longDescription;
+  const isLong = project.description.length > COLLAPSED_CHARS;
   const displayText = expanded
     ? fullText
     : project.description.slice(0, COLLAPSED_CHARS).trimEnd() + (isLong ? "…" : "");
@@ -89,7 +89,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </p>
 
       {/* Expand / collapse toggle */}
-      {isLong && (
+      {!!project.longDescription && (
         <button
           onClick={() => setExpanded(!expanded)}
           className="flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-accent transition-colors w-fit -mt-2"

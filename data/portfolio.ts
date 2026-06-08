@@ -116,20 +116,6 @@ const portfolioData: PortfolioData = {
 
   projects: [
     {
-      id: "agentic-analytics-sap",
-      title: "Agentic AI Analytics on SAP HANA",
-      description:
-        "Production LLM pipeline that lets 800+ global managers query billion-row SAP HANA datasets in plain English. Enforces RBAC-aware SQL guardrails (partition pruning, cost checks) on LLM-generated queries. Reduced query latency from ~60s to under 3s and cut overall query load by ~70%.",
-      longDescription:
-        "Built on FastAPI and OpenAI with a custom SQL guardrail layer that enforces row-level security, partition pruning, and query cost limits before any LLM-generated SQL touches the database. Handles 3,000+ daily interactions. The agentic layer routes between clarification, decomposition, and direct execution depending on query complexity.",
-      type: "company",
-      companyName: "Findability Sciences",
-      companyUrl: "https://www.findability.ai/en/manufacturing-ai",
-      tags: ["Python", "FastAPI", "OpenAI", "SAP HANA", "Agents", "LLM", "SQL Guardrails"],
-      featured: true,
-      year: 2025,
-    },
-    {
       id: "patent-drafting-ai",
       title: "AI Patent Drafting Copilot",
       description:
@@ -143,6 +129,31 @@ const portfolioData: PortfolioData = {
       featured: true,
       year: 2025,
     },
+    {
+      id: "rag-ingestion-pipeline",
+      title: "Production RAG Ingestion Pipeline",
+      description:
+        "A production-grade RAG ingestion system with multi-format support (PDF, DOCX, PPTX, images), PDF classification, OCR pipelines, table and images extraction.",
+      type: "personal",
+      tags: ["Python", "RAG", "OCR", "LangChain", "PyMuPDF"],
+      githubUrl: "https://github.com/JTtime/rag-document-processing-pipeline",
+      year: 2026,
+    },
+    {
+      id: "agentic-analytics-sap",
+      title: "Agentic AI Analytics on SAP HANA",
+      description:
+        "Production LLM pipeline that lets 800+ global managers query billion-row SAP HANA datasets in plain English. Enforces RBAC-aware SQL guardrails (partition pruning, cost checks) on LLM-generated queries. Reduced query latency from ~60s to under 3s and cut overall query load by ~70%.",
+      longDescription:
+        "Built on FastAPI and OpenAI with a custom SQL guardrail layer that enforces row-level security, partition pruning, and query cost limits before any LLM-generated SQL touches the database. Handles 3,000+ daily interactions. The agentic layer routes between clarification, decomposition, and direct execution depending on query complexity.",
+      type: "company",
+      companyName: "Findability Sciences",
+      companyUrl: "https://www.findability.ai/en/manufacturing-ai",
+      tags: ["Python", "FastAPI", "OpenAI", "SAP HANA", "Agents", "LLM", "SQL Guardrails"],
+      featured: true,
+      year: 2025,
+    },
+    
     {
       id: "genai-lms",
       title: "GenAI-Powered Government LMS",
@@ -177,16 +188,7 @@ const portfolioData: PortfolioData = {
       featured: false,
       year: 2024,
     },
-    {
-      id: "rag-ingestion-pipeline",
-      title: "Production RAG Ingestion Pipeline",
-      description:
-        "A production-grade RAG ingestion system with multi-format support (PDF, DOCX, PPTX, images), PDF classification, OCR pipelines, table and formula extraction, and a Node.js hybrid architecture. Built on sentence-transformers, FAISS, and PyMuPDF.",
-      type: "personal",
-      tags: ["Python", "RAG", "FAISS", "OCR", "LangChain", "Node.js", "PyMuPDF"],
-      githubUrl: "https://github.com/JTtime/rag-pipeline",
-      year: 2024,
-    },
+   
   ],
 
   blogs: [
@@ -238,6 +240,15 @@ const portfolioData: PortfolioData = {
       tags: ["RAG", "LLM", "AI Engineering"],
       readingTime: "9 min",
       url: "https://jeevrajtaralkar.substack.com/p/the-harsh-reality-of-rag-why-youtube?triedRedirect=true"
+    },
+    {
+      id: "rag-document-processing-pipeline",
+      title: "Building a Production-Ready Document Processing Pipeline for RAG",
+      summary: "This article documents what I learned, why traditional PDF extraction approaches fail, and how I built an open-source pipeline that converts messy enterprise documents into retrieval-ready knowledge.",
+      date: "2026-06-8",
+      tags: ["OpenAI", "RAG", "Document", "Ingestion"],
+      url: "https://jeevrajtaralkar.substack.com/p/building-a-production-ready-document",
+      readingTime: "13 min",
     },
     {
       id: "openai-cheaper-models",

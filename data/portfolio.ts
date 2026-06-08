@@ -188,6 +188,18 @@ const portfolioData: PortfolioData = {
       featured: false,
       year: 2024,
     },
+    {
+      id: "product3d",
+      title: "Product 3d",
+      description:
+        "Revolutionize your fashion experience with our 3D T-Shirts' key features. Discover unparalleled depth, vibrant colors, and dynamic designs that come to life, thanks to cutting-edge AI technology. Elevate your style with intelligent fashion.",
+      type: "opensource",
+      tags: ["React", "TypeScript", "3D", "Open Source"],
+      githubUrl: "https://github.com/JTtime/Product_3D",
+      liveUrl: "https://product-3-d.vercel.app/",
+      featured: false,
+      year: 2024,
+    },
    
   ],
 

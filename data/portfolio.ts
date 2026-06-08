@@ -297,6 +297,7 @@ const portfolioData: PortfolioData = {
         "Tool Calling",
       ],
       companyUrl: "https://www.findability.ai/en",
+      companyLogo: "findability-logo.jpg",
       remote: true,
     },
     {
@@ -324,6 +325,7 @@ const portfolioData: PortfolioData = {
         "Docker",
       ],
       companyUrl: "https://about.vridhee.com/",
+      companyLogo: "vridhee-logo.svg",
       remote: false,
       location: "Mumbai, India",
     },
@@ -334,6 +336,8 @@ const portfolioData: PortfolioData = {
       type: "full-time",
       startDate: "May 2023",
       endDate: "Mar 2024",
+      companyLogo: "edufund-logo.svg",
+      companyUrl: "https://www.edufund.in/", 
       description: [
         "Sole frontend engineer who designed and shipped the end-to-end onboarding flow for a mobile app serving 500K+ users",
         "Built a GenAI chatbot for college fee prediction using Python and OpenAI APIs",
@@ -358,6 +362,8 @@ const portfolioData: PortfolioData = {
       type: "full-time",
       startDate: "Aug 2019",
       endDate: "Apr 2023",
+      companyLogo: "headgear-audio-logo.png",
+      companyUrl: "https://headgearaudio.in/",
       description: [
         "Built an end-to-end e-commerce platform using Next.js with a Python FastAPI backend",
         "Implemented analytics dashboards, third-party API integrations, and SEO optimizations",

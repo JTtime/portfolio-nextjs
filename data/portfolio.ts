@@ -191,6 +191,26 @@ const portfolioData: PortfolioData = {
 
   blogs: [
     {
+      id: "borderless-table-extraction",
+      title: "Extracting Borderless Tables from PDFs Without an LLM",
+      summary:
+        "Most PDF table extractors break on borderless tables. Here's how I approached the problem using Table Transformer ONNX models, pdfplumber heuristics, and surrounding context capture — all without a single LLM call.",
+      date: "2026-06-08",
+      tags: ["Python", "PDF", "ML", "Document Processing"],
+      readingTime: "8 min",
+      url: "https://jeevrajtaralkar.substack.com/p/extracting-borderless-tables-from",
+    },
+    {
+      id: "ONNX-document-ML",
+      title: "Why ONNX Is the Right Choice for Offline Document ML",
+      summary:
+        "After working on document-heavy ML systems, I’ve become increasingly convinced that for many practical use cases, pre-trained ONNX models outperform custom-trained pipelines in overall engineering value.",
+      date: "2026-06-08",
+      tags: ["OpenAI", "AI Agents", "Tool Calling", "LLM"],
+      readingTime: "12 min",
+      url: "https://open.substack.com/pub/jeevrajtaralkar/p/why-onnx-is-the-right-choice-for",
+    },
+    {
       id: "tool-calling",
       title: "From Chatbots to AI Agents: A Practical Guide to OpenAI Tool Calling",
       summary:
@@ -213,59 +233,51 @@ const portfolioData: PortfolioData = {
       id: "production-rag",
       title: "The Reality of Building a Production-Grade RAG System",
       summary:
-        "Why real-world RAG systems require OCR, document understanding, multimodal parsing, and better retrieval design.",
-      date: "2026-02-01",
+        "A hands-on look at what actually breaks when you deploy RAG in production — and how startup founders can design systems that handle complex, unstructured data like Fortune 500 documents.",
+      date: "2025-10-22",
       tags: ["RAG", "LLM", "AI Engineering"],
       readingTime: "9 min",
+      url: "https://jeevrajtaralkar.substack.com/p/the-harsh-reality-of-rag-why-youtube?triedRedirect=true"
+    },
+    {
+      id: "openai-cheaper-models",
+      title: "I Tried the Cheaper Models. Here’s Why I Came Back to OpenAI",
+      summary: "Benchmarks are fun. Demos are exciting. Blog posts that claim “this model beats GPT on reasoning” make for great headlines. But when you’re actually building production-grade AI apps? That’s where the rubber meets the road.",
+      date: "2025-08-18",
+      tags: ["OpenAI", "Cheaper Models", "GenAI"],
+      url: "https://jeevrajtaralkar.substack.com/p/i-tried-the-cheaper-models-heres",
+      readingTime: "8 min",
     },
     {
       id: "genai-journey",
       title: "From JavaScript Curiosity to Enterprise GenAI Systems",
-      summary: "My transition from traditional frontend engineering into production-grade AI systems.",
-      date: "2025-08-01",
-      tags: ["GenAI", "Career Growth", "MERN"],
+      summary: "My transition from traditional fullstack engineering into production-grade AI systems.",
+      date: "2025-08-02",
+      tags: ["GenAI", "Career Growth", "MERN", "OpenAI"],
       readingTime: "8 min",
+      url: "https://www.linkedin.com/pulse/from-javascript-curiosity-building-enterprise-grade-genai-taralkar-qdkwf/"
     },
-    {
-      id: "borderless-table-extraction",
-      title: "Extracting Borderless Tables from PDFs Without an LLM",
-      summary:
-        "Most PDF table extractors break on borderless tables. Here's how I approached the problem using Table Transformer ONNX models, pdfplumber heuristics, and surrounding context capture — all without a single LLM call.",
-      date: "2024-11-15",
-      tags: ["Python", "PDF", "ML", "Document Processing"],
-      readingTime: "8 min",
-      url: "https://dev.to/jeevraj/borderless-table-extraction",
-    },
-    {
-      id: "onnx-for-document-ml",
-      title: "Why ONNX Is the Right Choice for Offline Document ML",
-      summary:
-        "A practical look at why pre-trained ONNX models beat fine-tuning your own for document processing tasks — covering inference speed, portability, zero-install distribution, and the tradeoffs that matter for a Python library.",
-      date: "2024-10-02",
-      tags: ["ONNX", "ML", "Python", "Offline AI"],
-      readingTime: "6 min",
-      url: "https://dev.to/jeevraj/onnx-document-ml",
-    },
-    {
-      id: "yc-document-intelligence",
-      title: "The Case for Document Infrastructure as a YC Startup",
-      summary:
-        "Unstructured data is still the hardest unsolved problem in enterprise AI. Every company drowns in PDFs, invoices, contracts, and reports. Here's why I think a deterministic, offline-first document processing layer is a fundable, defensible business.",
-      date: "2024-09-18",
-      tags: ["Startups", "YC", "Document AI", "Open Source"],
-      readingTime: "10 min",
-      url: "https://dev.to/jeevraj/document-intelligence-yc",
-    },
-    {
-      id: "tatr-deep-dive",
-      title: "Table Transformer (TATR) Deep Dive for Practitioners",
-      summary:
-        "Everything I learned reading order detection, TATR architecture, and hybrid pipelines for complex financial documents — and how this research shaped the roadmap of my PDF extraction library.",
-      date: "2024-08-05",
-      tags: ["Deep Learning", "TATR", "Document AI", "Research"],
-      readingTime: "12 min",
-      url: "https://dev.to/jeevraj/tatr-deep-dive",
-    },
+   
+    // {
+    //   id: "yc-document-intelligence",
+    //   title: "The Case for Document Infrastructure as a YC Startup",
+    //   summary:
+    //     "Unstructured data is still the hardest unsolved problem in enterprise AI. Every company drowns in PDFs, invoices, contracts, and reports. Here's why I think a deterministic, offline-first document processing layer is a fundable, defensible business.",
+    //   date: "2024-09-18",
+    //   tags: ["Startups", "YC", "Document AI", "Open Source"],
+    //   readingTime: "10 min",
+    //   url: "https://dev.to/jeevraj/document-intelligence-yc",
+    // },
+    // {
+    //   id: "tatr-deep-dive",
+    //   title: "Table Transformer (TATR) Deep Dive for Practitioners",
+    //   summary:
+    //     "Everything I learned reading order detection, TATR architecture, and hybrid pipelines for complex financial documents — and how this research shaped the roadmap of my PDF extraction library.",
+    //   date: "2024-08-05",
+    //   tags: ["Deep Learning", "TATR", "Document AI", "Research"],
+    //   readingTime: "12 min",
+    //   url: "https://dev.to/jeevraj/tatr-deep-dive",
+    // },
   ],
 
   experience: [
@@ -299,6 +311,7 @@ const portfolioData: PortfolioData = {
       companyUrl: "https://www.findability.ai/en",
       companyLogo: "findability-logo.jpg",
       remote: true,
+      location: "Mumbai, India",
     },
     {
       id: "vridhee-innovations",
@@ -327,7 +340,7 @@ const portfolioData: PortfolioData = {
       companyUrl: "https://about.vridhee.com/",
       companyLogo: "vridhee-logo.svg",
       remote: false,
-      location: "Mumbai, India",
+      location: "Navi Mumbai, India",
     },
     {
       id: "edufund",
@@ -353,11 +366,11 @@ const portfolioData: PortfolioData = {
         "TypeScript",
       ],
       remote: false,
-      location: "Mumbai, India",
+      location: "Bengaluru, India",
     },
     {
       id: "headgear-audio",
-      company: "HeadGear Audio",
+      company: "HeadGear Audio LLP",
       role: "Full-Stack Web Developer",
       type: "full-time",
       startDate: "Aug 2019",

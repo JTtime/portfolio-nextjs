@@ -188,6 +188,7 @@ const portfolioData: PortfolioData = {
       featured: true,
 
       year: 2026,
+      liveUrl: "https://www.findability.ai/en/agentic-ai-platform",
     },
 
     {
@@ -285,6 +286,7 @@ const portfolioData: PortfolioData = {
       featured: true,
 
       year: 2025,
+
     },
 
     {
@@ -346,7 +348,8 @@ const portfolioData: PortfolioData = {
         "LLM"
       ],
 
-      readingTime: "10 min"
+      readingTime: "10 min",
+      
     },
 
     {
@@ -370,6 +373,28 @@ const portfolioData: PortfolioData = {
     },
 
     {
+      id: "prompt-engineering",
+
+      title:
+        "Vibe Coding is a lie",
+
+      summary:
+        "Prompt Engineering Is Overrated. Engineering Skill Is Not.",
+
+      date: "2026-02-01",
+
+      tags: [
+        "RAG",
+        "LLM",
+        "AI Engineering",
+        "Prompt Engineering",
+        "Vibe Coding"
+      ],
+
+      readingTime: "9 min",
+      url: "https://jeevrajtaralkar.substack.com/p/prompt-engineering-is-overrated-engineering"
+    },
+    {
       id: "production-rag",
 
       title:
@@ -387,7 +412,7 @@ const portfolioData: PortfolioData = {
       ],
 
       readingTime: "9 min"
-    }
+    },
   ],
 
   experience: [

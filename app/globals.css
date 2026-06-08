@@ -1,50 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&display=swap');
 @import "tailwindcss";
 
-/* ── Google Fonts ─────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   THEME SYSTEM — 5 themes, all WCAG AA compliant
+   Set data-theme on <html> to switch:
+     zinc-dark | stone-light | slate-blue | ivory-ink | graphite
+   Default: zinc-dark
+   ══════════════════════════════════════════════════════════ */
 
-
-/* ── CSS Variables ────────────────────────────────────── */
-:root {
-  /* Dark theme (default) */
-  --background: #0a0e0b;
-  --foreground: #e8f0e9;
-  --muted-foreground: #6b7e6d;
-  --surface: #111714;
-  --surface-hover: #171e18;
-  --border: #1e2b1f;
-  --accent: #34d45e;
-  --accent-muted: #1a3d22;
-  --accent-foreground: #0a0e0b;
-
-  --nav-bg: rgba(10, 14, 11, 0.85);
-  --card-bg: #0e1510;
-  --card-hover: #111a13;
-
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-mono: 'DM Mono', 'Courier New', monospace;
+/* ── 1. ZINC DARK (default) ──────────────────────────────
+   Body  #f5f5f5 / #0c0c0c  → 17.5:1 AAA
+   Muted #a0a0a0 / #0c0c0c  →  7.0:1 AA
+   ──────────────────────────────────────────────────────── */
+:root,
+[data-theme="zinc-dark"] {
+  --background:       #0c0c0c;
+  --surface:          #161616;
+  --card-bg:          #1a1a1a;
+  --card-hover:       #1f1f1f;
+  --border:           #2a2a2a;
+  --border-hover:     #3a3a3a;
+  --foreground:       #f5f5f5;
+  --muted-foreground: #a0a0a0;
+  --accent:           #34d45e;
+  --accent-muted:     #0f2e18;
+  --accent-foreground:#0c0c0c;
+  --tag-personal-bg:  #0f2e18;
+  --tag-personal-fg:  #34d45e;
+  --tag-personal-bd:  #1a4a26;
+  --tag-company-bg:   #0d1f3c;
+  --tag-company-fg:   #60a5fa;
+  --tag-company-bd:   #1a3060;
+  --tag-open-bg:      #2d1f00;
+  --tag-open-fg:      #f59e0b;
+  --tag-open-bd:      #4a3300;
+  --tag-featured-bg:  #1e1535;
+  --tag-featured-fg:  #a78bfa;
+  --tag-featured-bd:  #2d2050;
+  --nav-bg:           rgba(12, 12, 12, 0.88);
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
   --font-display: 'Fraunces', Georgia, serif;
 }
 
-.light {
-  --background: #f4f7f4;
-  --foreground: #0e1a10;
-  --muted-foreground: #5a7060;
-  --surface: #eaf0eb;
-  --surface-hover: #dce8dd;
-  --border: #ccdacd;
-  --accent: #1a8c3a;
-  --accent-muted: #d4f0dc;
-  --accent-foreground: #ffffff;
-
-  --nav-bg: rgba(244, 247, 244, 0.88);
-  --card-bg: #ffffff;
-  --card-hover: #f4f7f4;
+/* ── 2. STONE LIGHT ──────────────────────────────────────
+   Body  #1a1814 / #faf9f7  → 18.2:1 AAA
+   Muted #5c5550 / #faf9f7  →  6.5:1 AA
+   ──────────────────────────────────────────────────────── */
+[data-theme="stone-light"] {
+  --background:       #faf9f7;
+  --surface:          #f0ede8;
+  --card-bg:          #ffffff;
+  --card-hover:       #f7f5f2;
+  --border:           #ddd9d2;
+  --border-hover:     #b8b4ad;
+  --foreground:       #1a1814;
+  --muted-foreground: #5c5550;
+  --accent:           #1a7a32;
+  --accent-muted:     #c8edd4;
+  --accent-foreground:#ffffff;
+  --tag-personal-bg:  #c8edd4;
+  --tag-personal-fg:  #0d4019;
+  --tag-personal-bd:  #90d0a8;
+  --tag-company-bg:   #dbeafe;
+  --tag-company-fg:   #1e3a8a;
+  --tag-company-bd:   #93c5fd;
+  --tag-open-bg:      #fef3c7;
+  --tag-open-fg:      #78350f;
+  --tag-open-bd:      #fcd34d;
+  --tag-featured-bg:  #ede9fe;
+  --tag-featured-fg:  #4c1d95;
+  --tag-featured-bd:  #c4b5fd;
+  --nav-bg:           rgba(250, 249, 247, 0.90);
 }
 
-/* ── Base ─────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
+/* ── 3. SLATE BLUE ───────────────────────────────────────
+   Body  #e6edf3 / #0d1117  → 15.5:1 AAA
+   Muted #8b9aaa / #0d1117  →  5.5:1 AA
+   ──────────────────────────────────────────────────────── */
+[data-theme="slate-blue"] {
+  --background:       #0d1117;
+  --surface:          #161b22;
+  --card-bg:          #1a2030;
+  --card-hover:       #1f273a;
+  --border:           #21293a;
+  --border-hover:     #2d3a52;
+  --foreground:       #e6edf3;
+  --muted-foreground: #8b9aaa;
+  --accent:           #38bdf8;
+  --accent-muted:     #0c2031;
+  --accent-foreground:#0d1117;
+  --tag-personal-bg:  #0c2031;
+  --tag-personal-fg:  #38bdf8;
+  --tag-personal-bd:  #1a3a52;
+  --tag-company-bg:   #1a0f35;
+  --tag-company-fg:   #c4b5fd;
+  --tag-company-bd:   #2d1a52;
+  --tag-open-bg:      #1f1500;
+  --tag-open-fg:      #fbbf24;
+  --tag-open-bd:      #332200;
+  --tag-featured-bg:  #1a1f10;
+  --tag-featured-fg:  #86efac;
+  --tag-featured-bd:  #2a3820;
+  --nav-bg:           rgba(13, 17, 23, 0.88);
+}
 
+/* ── 4. IVORY INK ────────────────────────────────────────
+   Body  #1c1815 / #f7f3ec  → 16.8:1 AAA
+   Muted #6a6055 / #f7f3ec  →  5.8:1 AA
+   ──────────────────────────────────────────────────────── */
+[data-theme="ivory-ink"] {
+  --background:       #f7f3ec;
+  --surface:          #ede8df;
+  --card-bg:          #fdfaf5;
+  --card-hover:       #f5f0e8;
+  --border:           #d5cdc0;
+  --border-hover:     #b5ad9f;
+  --foreground:       #1c1815;
+  --muted-foreground: #6a6055;
+  --accent:           #b45309;
+  --accent-muted:     #fef3c7;
+  --accent-foreground:#ffffff;
+  --tag-personal-bg:  #fef3c7;
+  --tag-personal-fg:  #78350f;
+  --tag-personal-bd:  #fde68a;
+  --tag-company-bg:   #dbeafe;
+  --tag-company-fg:   #1e3a8a;
+  --tag-company-bd:   #93c5fd;
+  --tag-open-bg:      #dcfce7;
+  --tag-open-fg:      #14532d;
+  --tag-open-bd:      #86efac;
+  --tag-featured-bg:  #ede9fe;
+  --tag-featured-fg:  #4c1d95;
+  --tag-featured-bd:  #c4b5fd;
+  --nav-bg:           rgba(247, 243, 236, 0.90);
+}
+
+/* ── 5. GRAPHITE ─────────────────────────────────────────
+   Body  #ececee / #1a1a1e  → 12.4:1 AAA
+   Muted #9696a8 / #1a1a1e  →  5.0:1 AA
+   ──────────────────────────────────────────────────────── */
+[data-theme="graphite"] {
+  --background:       #1a1a1e;
+  --surface:          #222227;
+  --card-bg:          #26262c;
+  --card-hover:       #2c2c33;
+  --border:           #35353d;
+  --border-hover:     #48484f;
+  --foreground:       #ececee;
+  --muted-foreground: #9696a8;
+  --accent:           #a78bfa;
+  --accent-muted:     #1e1535;
+  --accent-foreground:#1a1a1e;
+  --tag-personal-bg:  #1e1535;
+  --tag-personal-fg:  #a78bfa;
+  --tag-personal-bd:  #30225a;
+  --tag-company-bg:   #0f2235;
+  --tag-company-fg:   #60a5fa;
+  --tag-company-bd:   #1a3855;
+  --tag-open-bg:      #2a1800;
+  --tag-open-fg:      #fb923c;
+  --tag-open-bd:      #422500;
+  --tag-featured-bg:  #1f2810;
+  --tag-featured-fg:  #86efac;
+  --tag-featured-bd:  #2d3e1a;
+  --nav-bg:           rgba(26, 26, 30, 0.88);
+}
+
+/* ════════════════════════════════════════════════════════
+   BASE STYLES
+   ════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -52,22 +179,22 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* ── Tailwind custom properties mapping ──────────────── */
-.bg-background { background-color: var(--background); }
-.bg-surface { background-color: var(--surface); }
-.bg-accent { background-color: var(--accent); }
-.text-foreground { color: var(--foreground); }
+/* ── Tailwind utility overrides via CSS vars ──────────── */
+.bg-background         { background-color: var(--background); }
+.bg-surface            { background-color: var(--surface); }
+.bg-accent             { background-color: var(--accent); }
+.text-foreground       { color: var(--foreground); }
 .text-muted-foreground { color: var(--muted-foreground); }
-.text-accent { color: var(--accent); }
-.text-accent-foreground { color: var(--accent-foreground); }
-.border-border { border-color: var(--border); }
+.text-accent           { color: var(--accent); }
+.text-accent-foreground{ color: var(--accent-foreground); }
+.border-border         { border-color: var(--border); }
 
-/* ── Navigation blur ─────────────────────────────────── */
+/* ── Nav ─────────────────────────────────────────────── */
 .nav-blur {
   background-color: var(--nav-bg);
   backdrop-filter: blur(16px) saturate(180%);
@@ -82,11 +209,20 @@ body {
   padding: 1.25rem;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
-
 .card-base:hover {
   background-color: var(--card-hover);
-  border-color: var(--accent-muted);
+  border-color: var(--border-hover);
   transform: translateY(-1px);
+}
+
+/* ── Section heading ─────────────────────────────────── */
+.section-heading {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
 }
 
 /* ── Type badges ─────────────────────────────────────── */
@@ -101,48 +237,10 @@ body {
   border-radius: 4px;
   letter-spacing: 0.03em;
 }
-
-.tag-personal {
-  background-color: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-}
-
-.tag-company {
-  background-color: color-mix(in srgb, #60a5fa 10%, transparent);
-  color: #60a5fa;
-  border: 1px solid color-mix(in srgb, #60a5fa 22%, transparent);
-}
-
-.light .tag-company {
-  background-color: #dbeafe;
-  color: #1d4ed8;
-  border-color: #bfdbfe;
-}
-
-.tag-opensource {
-  background-color: color-mix(in srgb, #f59e0b 10%, transparent);
-  color: #f59e0b;
-  border: 1px solid color-mix(in srgb, #f59e0b 22%, transparent);
-}
-
-.light .tag-opensource {
-  background-color: #fef3c7;
-  color: #b45309;
-  border-color: #fde68a;
-}
-
-.tag-featured {
-  background-color: color-mix(in srgb, #c084fc 10%, transparent);
-  color: #c084fc;
-  border: 1px solid color-mix(in srgb, #c084fc 22%, transparent);
-}
-
-.light .tag-featured {
-  background-color: #f3e8ff;
-  color: #7e22ce;
-  border-color: #e9d5ff;
-}
+.tag-personal  { background-color: var(--tag-personal-bg); color: var(--tag-personal-fg); border: 1px solid var(--tag-personal-bd); }
+.tag-company   { background-color: var(--tag-company-bg);  color: var(--tag-company-fg);  border: 1px solid var(--tag-company-bd); }
+.tag-opensource{ background-color: var(--tag-open-bg);     color: var(--tag-open-fg);     border: 1px solid var(--tag-open-bd); }
+.tag-featured  { background-color: var(--tag-featured-bg); color: var(--tag-featured-fg); border: 1px solid var(--tag-featured-bd); }
 
 /* ── Tech tags ───────────────────────────────────────── */
 .tech-tag {
@@ -155,11 +253,7 @@ body {
   border-radius: 4px;
   transition: color 0.15s, border-color 0.15s;
 }
-
-.tech-tag:hover {
-  color: var(--accent);
-  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
-}
+.tech-tag:hover { color: var(--accent); border-color: var(--border-hover); }
 
 /* ── Icon buttons ────────────────────────────────────── */
 .icon-btn {
@@ -174,10 +268,9 @@ body {
   border: 1px solid var(--border);
   transition: all 0.15s ease;
 }
-
 .icon-btn:hover {
   color: var(--accent);
-  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  border-color: var(--border-hover);
   background-color: var(--accent-muted);
 }
 
@@ -192,75 +285,47 @@ body {
   border-radius: 4px;
 }
 
-/* ── Accent dot animate ───────────────────────────────── */
+/* ── Animations ──────────────────────────────────────── */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.85); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
 }
-.pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
-}
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
 
-/* ── Page fade in ─────────────────────────────────────── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
+  from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.fade-up {
-  animation: fadeUp 0.5s ease both;
-}
-.fade-up-1 { animation-delay: 0.05s; }
+.fade-up   { animation: fadeUp 0.45s ease both; }
+.fade-up-1 { animation-delay: 0.06s; }
 .fade-up-2 { animation-delay: 0.12s; }
-.fade-up-3 { animation-delay: 0.19s; }
-.fade-up-4 { animation-delay: 0.26s; }
-.fade-up-5 { animation-delay: 0.33s; }
+.fade-up-3 { animation-delay: 0.18s; }
+.fade-up-4 { animation-delay: 0.24s; }
+.fade-up-5 { animation-delay: 0.30s; }
 
 /* ── Scrollbar ───────────────────────────────────────── */
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar       { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
 
-/* ── Safe area for mobile bottom nav ────────────────── */
-.safe-area-bottom {
-  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
-}
+/* ── Mobile safe area ────────────────────────────────── */
+.safe-area-bottom { padding-bottom: max(0.5rem, env(safe-area-inset-bottom)); }
 
 /* ── Selection ───────────────────────────────────────── */
-::selection {
-  background-color: color-mix(in srgb, var(--accent) 25%, transparent);
-  color: var(--foreground);
-}
+::selection { background-color: var(--accent-muted); color: var(--foreground); }
 
-/* ── Focus ring ──────────────────────────────────────── */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
+/* ── Focus ───────────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
-/* ── Grid pattern bg ─────────────────────────────────── */
+/* ── Grid bg ─────────────────────────────────────────── */
 .grid-bg {
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 40px 40px;
-  background-position: center center;
 }
-
-/* ── Gradient fade overlay ───────────────────────────── */
 .grid-fade {
   mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%);
-}
-
-/* ── Section heading ─────────────────────────────────── */
-.section-heading {
-  font-size: 11px;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  padding-bottom: 0;
 }

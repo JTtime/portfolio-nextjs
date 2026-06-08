@@ -552,7 +552,8 @@ const portfolioData: PortfolioData = {
       ],
 
       companyUrl:
-        "https://www.findability.ai",
+        "https://www.findability.ai/en",
+        companyLogo: "findability-logo.jpg",
 
       location:
         "Mumbai, India",
@@ -564,6 +565,8 @@ const portfolioData: PortfolioData = {
       id: "vridhee-innovations",
 
       company: "Vridhee Innovations",
+      companyUrl: "https://about.vridhee.com/",
+      companyLogo: "vridhee-logo.svg",
 
       role:
         "Full-Stack Engineer (AI)",
@@ -609,6 +612,8 @@ const portfolioData: PortfolioData = {
       id: "edufund",
 
       company: "EduFund",
+      companyUrl: "https://www.edufund.in/",
+      companyLogo: "edufund-logo.svg",
 
       role:
         "Product Engineer",
@@ -651,6 +656,8 @@ const portfolioData: PortfolioData = {
       id: "headgear-audio",
 
       company: "HeadGear Audio",
+      companyUrl: "https://headgearaudio.in/",
+      companyLogo: "headgear-audio-logo.png",
 
       role:
         "Full-Stack Web Developer",
